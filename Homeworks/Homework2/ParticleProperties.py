@@ -34,8 +34,8 @@ def ParticleInfo(filename,particle_type,particle_number):
     velo = np.sqrt(desired_vx**2 + desired_vy**2 + desired_vz**2) #get the 3D distance to the particle
     velo = np.around(velo,3)*u.km / u.s #round to 3 decimals and apply units    
     
-    mass = newdata['m'][particle_number]*u.M_sun #get the mass of the desired particle
+    mass = newdata['m'][particle_number]*1e10*u.M_sun #get the mass (in 1e10) of the desired particle
     
     return distance,velo,mass #return the desired distance, velocity, and mass
 
-
+distance,velo,mass = ParticleInfo('MW_000.txt', 2, 100)
