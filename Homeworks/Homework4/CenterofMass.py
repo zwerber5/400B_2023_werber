@@ -270,11 +270,15 @@ if __name__ == '__main__' :
     M31_COM = CenterOfMass("M31_000.txt", 2)
     M31_COM_p = M31_COM.COM_P(0.1)
     M31_COM_v = M31_COM.COM_V(M31_COM_p[0],  M31_COM_p[1],  M31_COM_p[2])
+    print('COM position of M31:',M31_COM_p)
+    print('COM velocity of M31:',M31_COM_v)
     
 #get M33 data
     M33_COM = CenterOfMass("M33_000.txt", 2)
     M33_COM_p = M33_COM.COM_P(0.1)
     M33_COM_v = M33_COM.COM_V(M33_COM_p[0],  M33_COM_p[1],  M33_COM_p[2])
+    print('COM position of M33:',M33_COM_p)
+    print('COM velocity of M33:',M33_COM_v)
 
 
 
@@ -297,8 +301,9 @@ print('Current velocity magnitude of COM of M31 and M33:',M33to31_v)
 
 
 print('q4:')
-print('An iterative process is important since the galaxies could be colliding already. In this case, the particles become\
-      difficult to distinguish who they belong to and iterating to smaller bounds allows us to capture the proper particles\
-          to the proper galaxy to still track the changing of the center of mass position and velocity.')
+print('An iterative process is important since the galaxies could be colliding already. \n'
+      'In this case, the particles become difficult to distinguish who they belong to and \n'
+      'iterating to smaller bounds allows us to capture the proper particles to the proper \n'
+      ' galaxy to still track the changing of the center of mass position and velocity.')
 
     
